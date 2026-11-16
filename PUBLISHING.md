@@ -42,6 +42,23 @@ Verificá que `manifest.json` esté en la raíz del ZIP (no dentro de una carpet
 3. Subí `dist/jwt-decoder-1.0.0.zip`.
 4. Revisá que el dashboard acepte el manifest.
 
+### Límite de 2 extensiones por cuenta
+
+Las cuentas nuevas de publisher tienen un límite inicial de **2 extensiones publicadas**. No es un problema del ZIP ni del manifest: es una medida antispam de Chrome Web Store.
+
+Si el dashboard muestra el límite:
+
+1. Usá la opción del dashboard para **solicitar un aumento** (`Request increase`) al intentar agregar el ítem.
+2. En la mayoría de los casos la decisión es inmediata; si te piden abrir un caso de soporte, puede tardar unos días.
+3. Se evalúan la antigüedad y actividad de la cuenta y el engagement sostenido de las extensiones ya publicadas.
+4. El límite no aplica a temas.
+
+Si la solicitud se rechaza, las razones habituales son que las extensiones publicadas todavía necesitan más engagement o que la cuenta es demasiado nueva. Mantené las extensiones existentes, esperá un tiempo y volvé a solicitar.
+
+No crees cuentas duplicadas para evadir el límite: va contra las políticas de Chrome Web Store y puede provocar la suspensión de todas las cuentas.
+
+Referencia oficial: https://developer.chrome.com/docs/webstore/publish#item_limits
+
 ## 3. Store listing
 
 Usá los textos de `CHROME-WEB-STORE-LISTING-EN.md`.
