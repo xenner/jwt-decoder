@@ -1,0 +1,161 @@
+{
+  "extName": {
+    "message": "JWT Decoder"
+  },
+  "extDescription": {
+    "message": "Decodifica un JWT e inspecciona su payload desde el menú contextual. Todo ocurre localmente en tu navegador."
+  },
+  "contextMenuTitle": {
+    "message": "Decodificar JWT"
+  },
+  "panelTitle": {
+    "message": "Decodificador JWT"
+  },
+  "copy": {
+    "message": "Copiar"
+  },
+  "copyToken": {
+    "message": "Copiar token"
+  },
+  "copyPayload": {
+    "message": "Copiar payload"
+  },
+  "copyHeader": {
+    "message": "Copiar encabezado"
+  },
+  "copySignature": {
+    "message": "Copiar firma"
+  },
+  "copied": {
+    "message": "Copiado"
+  },
+  "copyFailed": {
+    "message": "No se pudo copiar"
+  },
+  "closeEsc": {
+    "message": "Cerrar (Esc)"
+  },
+  "notDecoded": {
+    "message": "Sin decodificar"
+  },
+  "decodedLocally": {
+    "message": "Decodificado localmente"
+  },
+  "encryptedSubtitle": {
+    "message": "Payload cifrado"
+  },
+  "unknownAlg": {
+    "message": "alg desconocido"
+  },
+  "claimsOne": {
+    "message": "1 claim"
+  },
+  "claimsMany": {
+    "message": "$1 claims"
+  },
+  "payloadTitle": {
+    "message": "Payload"
+  },
+  "headerTitle": {
+    "message": "Encabezado"
+  },
+  "signatureTitle": {
+    "message": "Firma"
+  },
+  "notVerified": {
+    "message": "no verificada"
+  },
+  "unsigned": {
+    "message": "Sin firma. Este token no está firmado."
+  },
+  "notVerifiedNote": {
+    "message": "La firma no se verifica. Esta extensión solo lee el token."
+  },
+  "algNoneNote": {
+    "message": "Este token no está firmado (alg: none). Cualquiera puede modificar su contenido."
+  },
+  "encryptedTitle": {
+    "message": "Token cifrado (JWE)"
+  },
+  "encryptedText": {
+    "message": "El payload está cifrado y no se puede decodificar sin la clave. Solo está disponible el encabezado."
+  },
+  "errorTitle": {
+    "message": "No es un JWT"
+  },
+  "errorEmpty": {
+    "message": "No hay texto para decodificar."
+  },
+  "errorNotJwt": {
+    "message": "El texto seleccionado no parece un JSON Web Token."
+  },
+  "errorSegments": {
+    "message": "Un JWT tiene 3 segmentos separados por puntos (5 en tokens cifrados). Este tiene $1."
+  },
+  "errorTooLong": {
+    "message": "El token seleccionado es demasiado largo para decodificarlo aquí."
+  },
+  "errorHeader": {
+    "message": "No se pudo leer el encabezado del token ($1)."
+  },
+  "errorPayload": {
+    "message": "No se pudo leer el payload del token ($1)."
+  },
+  "errorHint": {
+    "message": "Selecciona solo el token —las partes separadas por puntos— y vuelve a intentarlo."
+  },
+  "reasonEmpty": {
+    "message": "la parte está vacía"
+  },
+  "reasonChars": {
+    "message": "contiene caracteres no válidos"
+  },
+  "reasonBase64": {
+    "message": "Base64URL no válido"
+  },
+  "reasonUtf8": {
+    "message": "no es UTF-8 válido"
+  },
+  "reasonJson": {
+    "message": "no es JSON válido"
+  },
+  "reasonObject": {
+    "message": "no es un objeto JSON"
+  },
+  "reasonUnknown": {
+    "message": "error desconocido"
+  },
+  "popupTagline": {
+    "message": "Decodifica un JWT sin salir del navegador."
+  },
+  "pasteLabel": {
+    "message": "Pega un token"
+  },
+  "pastePlaceholder": {
+    "message": "eyJhbGciOi…"
+  },
+  "decodeButton": {
+    "message": "Decodificar"
+  },
+  "howToTitle": {
+    "message": "Decodificar desde cualquier página"
+  },
+  "howToStep1": {
+    "message": "Selecciona el token en la página."
+  },
+  "howToStep2": {
+    "message": "Haz clic derecho y elige «Decodificar JWT»."
+  },
+  "howToStep3": {
+    "message": "El payload aparece junto a la selección."
+  },
+  "privacyNote": {
+    "message": "Todo se decodifica localmente. No se envía ningún dato."
+  },
+  "cannotOpenHere": {
+    "message": "JWT Decoder no puede abrir un panel en esta página. Usa el icono de la barra y pega el token."
+  },
+  "localeCode": {
+    "message": "es-419"
+  }
+}

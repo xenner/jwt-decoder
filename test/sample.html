@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JWT Decoder · página de prueba</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #0e7490;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --panel: #111a2b;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --border: #263449;
+        --accent: #22d3ee;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px 64px;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    }
+    main { max-width: 900px; margin: 0 auto; }
+    h1 { margin: 0 0 6px; font-size: 26px; }
+    .lead { margin: 0 0 24px; color: var(--muted); }
+    .step {
+      display: inline-block;
+      margin: 0 4px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+    section {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--panel);
+    }
+    h2 { margin: 0 0 8px; font-size: 16px; }
+    p { margin: 0 0 10px; }
+    p:last-child { margin-bottom: 0; }
+    code.token {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      overflow-wrap: anywhere;
+      user-select: all;
+      cursor: text;
+    }
+    .muted { color: var(--muted); font-size: 13px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>JWT Decoder · página de prueba</h1>
+    <p class="lead">
+      Seleccioná un token y usá <span class="step">clic derecho</span> →
+      <span class="step">JWT Decode / Decodificar JWT</span>. El panel aparece junto a la selección.
+    </p>
+
+    <section>
+      <h2>Token válido (ejemplo de jwt.io)</h2>
+      <p class="muted">HS256, sin <code>exp</code>. Muestra el payload con <em>name</em> y <em>sub</em>.</p>
+      <code class="token">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code>
+    </section>
+
+    <section>
+      <h2>Token vencido</h2>
+      <p class="muted">Tiene <code>exp</code> en el pasado: el panel lo marca en rojo con el tiempo relativo.</p>
+      <code class="token">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkYSBMb3ZlbGFjZSIsImVtYWlsIjoiYWRhQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiYWRtaW4iLCJiaWxsaW5nIl0sImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoxNzAwMDAzNjAwLCJwcmVtaXVtIjp0cnVlfQ.demo-signature-not-verified</code>
+    </section>
+
+    <section>
+      <h2>Token sin firmar (alg: none)</h2>
+      <p class="muted">Muestra el aviso de que el contenido puede modificarse.</p>
+      <code class="token">eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJkZW1vLXVzZXIiLCJzY29wZSI6InJlYWQ6cHJvZmlsZSIsImlhdCI6MTcwMDAwMDAwMH0.</code>
+    </section>
+
+    <section>
+      <h2>Token cifrado (JWE)</h2>
+      <p class="muted">Solo se puede leer el encabezado; el payload está cifrado.</p>
+      <code class="token">eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00iLCJjdHkiOiJKV1QifQ.hF2sL0fakeEncryptedKey.Ax9fakeIv.Bx8fakeCiphertext.Cx7fakeTag</code>
+    </section>
+
+    <section>
+      <h2>Texto que no es un JWT</h2>
+      <p class="muted">El panel explica por qué no se pudo decodificar.</p>
+      <code class="token">esto.no.es.un.jwt</code>
+    </section>
+
+    <section>
+      <h2>Token dentro de una línea más larga</h2>
+      <p class="muted">Podés seleccionar toda la línea: la extensión extrae el token.</p>
+      <code class="token">Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code>
+    </section>
+  </main>
+</body>
+</html>

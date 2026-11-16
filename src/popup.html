@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="extName">JWT Decoder</title>
+  <link rel="stylesheet" href="jwd.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="jwd-page">
+  <main class="jwd-page-main">
+    <header class="jwd-page-head">
+      <span class="jwd-brand jwd-brand-lg" aria-hidden="true">JWT</span>
+      <div>
+        <h1 class="jwd-page-title" data-i18n="extName">JWT Decoder</h1>
+        <p class="jwd-page-tagline" data-i18n="popupTagline">Decode a JWT without leaving your browser.</p>
+      </div>
+    </header>
+
+    <section class="jwd-card">
+      <label class="jwd-label" for="token" data-i18n="pasteLabel">Paste a token</label>
+      <textarea id="token" class="jwd-textarea" spellcheck="false" autocomplete="off"
+        autocapitalize="off" autofocus
+        data-i18n-placeholder="pastePlaceholder"
+        placeholder="eyJhbGciOi…"></textarea>
+      <button id="decode" class="jwd-primary" type="button" data-i18n="decodeButton">Decode</button>
+    </section>
+
+    <section class="jwd-result" id="result" aria-live="polite" hidden></section>
+    <p class="jwd-status" id="status" role="status"></p>
+
+    <section class="jwd-help">
+      <h2 class="jwd-help-title" data-i18n="howToTitle">Decode from any page</h2>
+      <ol>
+        <li data-i18n="howToStep1">Select the token on the page.</li>
+        <li data-i18n="howToStep2">Right-click and choose “JWT Decode”.</li>
+        <li data-i18n="howToStep3">The payload appears next to the selection.</li>
+      </ol>
+      <p class="jwd-note" data-i18n="privacyNote">Everything is decoded locally. No data is sent anywhere.</p>
+    </section>
+  </main>
+
+  <script src="jwt.js"></script>
+  <script src="ui.js"></script>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
