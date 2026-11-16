@@ -22,6 +22,13 @@ No hay build. El ZIP contiene el manifest y los archivos de ejecución:
 cd jwt-decoder
 mkdir -p dist
 rm -f dist/jwt-decoder-1.0.0.zip
+python3 -m zipfile -c dist/jwt-decoder-1.0.0.zip \
+  manifest.json src icons _locales README.md PRIVACY.md LICENSE privacy.html
+```
+
+Si tenés `zip` instalado, el comando equivalente es:
+
+```bash
 zip -r dist/jwt-decoder-1.0.0.zip \
   manifest.json src icons _locales README.md PRIVACY.md LICENSE privacy.html
 ```

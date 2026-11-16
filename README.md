@@ -151,8 +151,16 @@ PUBLISHING.md              guía paso a paso de publicación
 
 ```bash
 cd jwt-decoder
-zip -r ../jwt-decoder-1.0.0.zip \
-  manifest.json src icons _locales README.md PRIVACY.md LICENSE
+mkdir -p dist
+python3 -m zipfile -c dist/jwt-decoder-1.0.0.zip \
+  manifest.json src icons _locales README.md PRIVACY.md LICENSE privacy.html
+```
+
+Si preferís `zip`:
+
+```bash
+zip -r dist/jwt-decoder-1.0.0.zip \
+  manifest.json src icons _locales README.md PRIVACY.md LICENSE privacy.html
 ```
 
 También puedes usar `chrome://extensions` → **Empaquetar extensión**.
@@ -162,6 +170,7 @@ También puedes usar `chrome://extensions` → **Empaquetar extensión**.
 - Ficha lista para copiar, en inglés: [CHROME-WEB-STORE-LISTING-EN.md](CHROME-WEB-STORE-LISTING-EN.md).
 - Ficha en español: [CHROME-WEB-STORE-LISTING.md](CHROME-WEB-STORE-LISTING.md).
 - Guía paso a paso: [PUBLISHING.md](PUBLISHING.md).
+- ZIP 1.0.0 listo para subir: [jwt-decoder-1.0.0.zip](https://github.com/xenner/jwt-decoder/releases/download/v1.0.0/jwt-decoder-1.0.0.zip).
 - Capturas de 1280×800 en [`screenshots/`](screenshots/).
 - Política de privacidad pública: **https://xenner.github.io/jwt-decoder/privacy.html**.
 
