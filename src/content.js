@@ -116,11 +116,9 @@
     const range = selection.getRangeAt(0);
     if (range.collapsed) return null;
 
-    const rects = range.getClientRects();
-    const rect = rects && rects.length
-      ? rects[rects.length - 1]
-      : range.getBoundingClientRect();
-
+    // Use the whole selection: a wrapped token has several client rects, and
+    // the last one can be a tiny fragment that would misplace the panel.
+    const rect = range.getBoundingClientRect();
     if (!rect || (!rect.width && !rect.height)) return null;
     return rect;
   }

@@ -134,6 +134,15 @@ body.jwd-page {
   background: var(--jwd-bg);
 }
 
+body.jwd-has-result .jwd-help {
+  display: none;
+}
+
+body.jwd-has-result .jwd-textarea {
+  min-height: 52px;
+  max-height: 90px;
+}
+
 .jwd-status {
   margin: 0;
   min-height: 0;

@@ -4,6 +4,17 @@ Extensión de Chrome (Manifest V3) que decodifica un **JWT** seleccionado en cua
 
 La interfaz está en **inglés por defecto** y se localiza automáticamente a **español de Argentina**, **español de Latinoamérica** y **portugués de Brasil** según el idioma de Chrome.
 
+<p align="center">
+  <img src="screenshots/panel-light.png" alt="Panel claro con el payload de un JWT decodificado" width="49%">
+  <img src="screenshots/panel-dark.png" alt="Panel oscuro con un token vencido" width="49%">
+</p>
+<p align="center"><em>El panel se abre junto a la selección y sigue el tema claro u oscuro de la página.</em></p>
+
+<p align="center">
+  <img src="screenshots/popup.png" alt="Popup de la extensión para pegar un token" width="72%">
+</p>
+<p align="center"><em>El popup del icono también permite pegar un token y decodificarlo.</em></p>
+
 ## Qué hace
 
 - Agrega **JWT Decode** (o **Decodificar JWT**) al menú contextual cuando hay texto seleccionado.
@@ -54,6 +65,10 @@ python3 -m http.server 8765
 ```
 
 Con la extensión cargada, selecciona cada token y prueba el menú contextual.
+
+También está publicada en GitHub Pages para probarla sin clonar el repositorio:
+
+**https://xenner.github.io/jwt-decoder/test/sample.html**
 
 ## Qué muestra el panel
 
@@ -118,9 +133,14 @@ src/
   i18n.js                  helper de internacionalización del popup
 _locales/                  mensajes en, es, es_419 y pt_BR
 icons/                     iconos 16/32/48/128, 512 y SVG fuente
+screenshots/               capturas 1280×800 para el README y la Store
 test/
   sample.html              página con tokens de ejemplo
   jwt.test.mjs             pruebas del decodificador con node:test
+privacy.html               política de privacidad lista para publicar
+CHROME-WEB-STORE-LISTING.md    ficha de la Store en español
+CHROME-WEB-STORE-LISTING-EN.md ficha de la Store en inglés
+PUBLISHING.md              guía paso a paso de publicación
 ```
 
 ### Empaquetar para la Chrome Web Store
@@ -132,6 +152,14 @@ zip -r ../jwt-decoder-1.0.0.zip \
 ```
 
 También puedes usar `chrome://extensions` → **Empaquetar extensión**.
+
+## Publicación en Chrome Web Store
+
+- Ficha lista para copiar, en inglés: [CHROME-WEB-STORE-LISTING-EN.md](CHROME-WEB-STORE-LISTING-EN.md).
+- Ficha en español: [CHROME-WEB-STORE-LISTING.md](CHROME-WEB-STORE-LISTING.md).
+- Guía paso a paso: [PUBLISHING.md](PUBLISHING.md).
+- Capturas de 1280×800 en [`screenshots/`](screenshots/).
+- Política de privacidad pública: **https://xenner.github.io/jwt-decoder/privacy.html**.
 
 ## Privacidad
 

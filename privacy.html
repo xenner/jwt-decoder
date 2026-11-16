@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — JWT Decoder</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f8fafc;
+      color: #0f172a;
+      font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 72px;
+    }
+    .badge {
+      display: inline-grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: linear-gradient(145deg, #0891b2, #155e75);
+      color: #ecfeff;
+      font: 700 11px/1 ui-monospace, monospace;
+      letter-spacing: .06em;
+      vertical-align: middle;
+      margin-right: 12px;
+    }
+    h1 { display: inline; font-size: 30px; letter-spacing: -.02em; }
+    h2 { margin-top: 36px; font-size: 18px; }
+    p, li { color: #334155; }
+    ul { padding-left: 22px; }
+    .meta { margin-top: 8px; color: #64748b; font-size: 13px; }
+    a { color: #0e7490; }
+    code {
+      padding: 1px 5px;
+      border-radius: 4px;
+      background: #eef2f6;
+      font: 13px ui-monospace, monospace;
+    }
+    .card {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 0 0 1px #e2e8f0, 0 8px 24px rgba(15, 23, 42, .04);
+    }
+    footer { margin-top: 44px; color: #94a3b8; font-size: 12px; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0b1220; color: #e2e8f0; }
+      p, li { color: #cbd5e1; }
+      .meta, footer { color: #94a3b8; }
+      a { color: #67e8f9; }
+      code { background: #162033; }
+      .card { background: #111a2b; box-shadow: 0 0 0 1px #263449; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="badge">JWT</span><h1>Privacy Policy — JWT Decoder</h1>
+      <p class="meta">Last updated: November 16, 2026</p>
+    </header>
+
+    <p><strong>JWT Decoder does not collect, sell, share, or transmit personal data.</strong></p>
+
+    <div class="card">
+      <h2>Data processed</h2>
+      <p>The extension works only with the text you explicitly select or paste:</p>
+      <ul>
+        <li>The JWT you select on a page or paste into the toolbar popup.</li>
+        <li>The decoded header, payload and signature, shown only in the browser tab where you requested them.</li>
+      </ul>
+      <p>All decoding happens locally in your browser. The token is never sent to the developer or to any third party, never written to disk, and never stored in <code>chrome.storage</code> or a log. Closing the panel or the popup discards it.</p>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><code>contextMenus</code>: adds the <strong>JWT Decode</strong> item to the right-click menu when text is selected.</li>
+        <li><code>activeTab</code>: grants temporary access to the current tab only after you choose that menu item, so the extension can show the decoded panel there. There is no permanent access to websites.</li>
+        <li><code>scripting</code>: injects the extension's own packaged files into the active tab after that click.</li>
+      </ul>
+      <p>The extension requests no <code>host_permissions</code>, has no content scripts on all sites, and makes no network requests. Its only <code>fetch</code> call loads the extension's own local stylesheet.</p>
+
+      <h2>Third parties</h2>
+      <p>No analytics, telemetry, advertising, accounts, external servers or third-party services are used. No data is sold or shared.</p>
+
+      <h2>Signature verification</h2>
+      <p>JWT Decoder does not verify signatures. It only reads the contents of the token. A token can be decoded successfully and still be invalid, expired or forged. Encrypted tokens (JWE) cannot be decrypted without the key.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the updated version will be published on this page with a new date.</p>
+
+      <h2>Contact</h2>
+      <p>Questions or issues: <a href="https://github.com/xenner/jwt-decoder/issues">github.com/xenner/jwt-decoder/issues</a>.</p>
+    </div>
+
+    <footer>
+      JWT Decoder is open source under the MIT License.
+      <a href="https://github.com/xenner/jwt-decoder">View the project on GitHub</a>.
+    </footer>
+  </main>
+</body>
+</html>

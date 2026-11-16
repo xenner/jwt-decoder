@@ -30,6 +30,7 @@ function decode () {
   const result = $('result');
   result.replaceChildren(JWTDecodeUI.build(current));
   result.hidden = false;
+  document.body.classList.add('jwd-has-result');
 
   if (!current.ok) status('');
 }
@@ -52,6 +53,13 @@ $('decode').addEventListener('click', decode);
 
 $('token').addEventListener('paste', () => {
   setTimeout(decode, 0);
+});
+
+$('token').addEventListener('input', () => {
+  if ($('token').value.trim()) return;
+  document.body.classList.remove('jwd-has-result');
+  $('result').hidden = true;
+  current = null;
 });
 
 $('token').addEventListener('keydown', (event) => {
