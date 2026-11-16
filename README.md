@@ -13,7 +13,7 @@ La interfaz está en **inglés por defecto** y se localiza automáticamente a **
 <p align="center">
   <img src="screenshots/popup.png" alt="Popup de la extensión para pegar un token" width="72%">
 </p>
-<p align="center"><em>El popup del icono también permite pegar un token y decodificarlo.</em></p>
+<p align="center"><em>El popup se abre al hacer clic en el icono de la extensión, en la barra de herramientas de Chrome, y permite pegar un token y decodificarlo.</em></p>
 
 ## Qué hace
 
@@ -50,6 +50,10 @@ No hay paso de compilación: la extensión se carga tal cual.
 | `Esc` | Cierra el panel. |
 | Clic fuera del panel | Cierra el panel. |
 | Icono de la extensión | Abre un popup para pegar un token y decodificarlo. |
+
+> Si no ves el icono en la barra de herramientas, abre el menú de extensiones de Chrome (el icono de pieza de rompecabezas, a la derecha de la barra de direcciones) y fija **JWT Decoder** con el alfiler. Después haz clic en el icono para abrir el popup.
+
+El popup es independiente del menú contextual: el menú contextual muestra el panel flotante junto al texto seleccionado; el icono de la barra abre la página para pegar un token.
 | `Ctrl/Cmd + Enter` en el popup | Decodifica el token pegado. |
 
 También funciona si seleccionas una línea completa como `Authorization: Bearer eyJ...`: la extensión busca el token dentro del texto.
