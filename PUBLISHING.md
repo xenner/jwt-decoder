@@ -86,11 +86,10 @@ En la pestaña **Privacy**:
 - **`contextMenus`:** ítem **JWT Decode** cuando hay texto seleccionado.
 - **`activeTab`:** acceso temporario a la pestaña solo después de elegir el menú contextual, para mostrar el panel.
 - **`scripting`:** inyectar los archivos propios de la extensión en la pestaña activa.
-- **Datos:** no se recopilan, venden ni comparten. El token se procesa localmente y no se transmite.
+- **Datos:** no se recopilan, venden ni comparten. El token se procesa localmente y no se transmite. En la sección de uso de datos, marcá **Website content**: es el único contenido que la extensión maneja (el texto que el usuario selecciona o pega), y lo hace localmente.
+- **Certificaciones:** marcá las tres de uso limitado (no vender/transferir datos, no usarlos para fines ajenos al propósito y no usarlos para evaluar crédito).
 - **Signature verification:** la extensión no verifica firmas; lo aclara en la ficha y en la interfaz.
 - **Privacy policy URL:** `https://xenner.github.io/jwt-decoder/privacy.html`.
-
-Si el cuestionario obliga a elegir una categoría de datos, la opción más honesta es **Website content**, usada solo localmente para mostrar el resultado y nunca transmitida.
 
 ## 5. Test instructions
 

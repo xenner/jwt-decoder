@@ -74,7 +74,7 @@ Código abierto: https://github.com/xenner/jwt-decoder
 - **Servidores propios:** no tiene.
 - **Firma:** no se verifica. La ficha y la interfaz lo aclaran.
 
-Si el cuestionario de privacidad obliga a declarar una categoría de datos, la opción más honesta es **Website content** (el texto que el usuario selecciona), usada solo localmente para mostrar el resultado y nunca transmitida.
+**Declaración de uso de datos:** marcá **Website content**. La extensión solo maneja el texto que el usuario selecciona o pega como JWT. Se decodifica localmente y nunca se guarda, registra, vende, comparte ni transmite. No aplica ninguna otra categoría. Marcá las tres certificaciones de uso limitado.
 
 ## Capturas
 

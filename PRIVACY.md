@@ -2,7 +2,7 @@
 
 JWT Decoder does not collect, store, or transmit any data.
 
-- The token you select or paste is decoded **in your browser**, inside the page or the extension popup. It is never sent to a server.
+- The token you select or paste is decoded **in your browser**, inside the page or the extension popup. It is never sent to a server. The selected token is website content, handled only in memory to show the result.
 - The extension makes no network requests. The only `fetch` call loads the extension's own local stylesheet.
 - Tokens are not saved to disk, to `chrome.storage`, or to any log. Closing the panel or popup discards them.
 - No analytics, telemetry, advertising, or third-party services are used.

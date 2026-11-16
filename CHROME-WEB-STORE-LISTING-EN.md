@@ -84,7 +84,7 @@ Open source: https://github.com/xenner/jwt-decoder
 - **Own servers:** None.
 - **Signature verification:** Not performed. The listing and the interface state this clearly.
 
-If the privacy questionnaire requires a data category, the most honest choice is **Website content** (the text selected by the user), used only locally to display the result and never transmitted.
+**Data usage disclosure:** select **Website content**. The extension handles only the text the user explicitly selects or pastes as a JWT. It is decoded locally and is never stored, logged, sold, shared or transmitted. No other data category applies. Check all three limited-use certifications.
 
 ## Screenshots
 
